@@ -8,6 +8,7 @@ export default function PortfolioPage() {
   const projects = [
     {
       id: 1,
+      url: "https://ecommerce.creativetools.space",
       title: "Rediseño E-commerce",
       description: "Investigación UX, Diseño UI",
       icon: "🛒",
@@ -16,6 +17,7 @@ export default function PortfolioPage() {
     },
     {
       id: 2,
+      url: "https://ecommerce.creativetools.space",
       title: "Dashboard Financiero",
       description: "Diseño UI, Prototipado",
       icon: "📊",
@@ -24,6 +26,7 @@ export default function PortfolioPage() {
     },
     {
       id: 3,
+      url: "https://ecommerce.creativetools.space",
       title: "App de Salud",
       description: "Investigación UX, Diseño UI",
       icon: "❤️",
@@ -32,6 +35,7 @@ export default function PortfolioPage() {
     },
     {
       id: 4,
+      url: "https://ecommerce.creativetools.space",
       title: "Plataforma de Reservas de Viajes",
       description: "Diseño UI, Pruebas de Usuario",
       icon: "✈️",
@@ -93,9 +97,10 @@ export default function PortfolioPage() {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {projects.map((project) => (
                 <Link
-                  href={`/projects/${project.id}`}
+                  href={project.url}
                   key={project.id}
                   className="group transition-all hover:scale-[1.02]"
+                  target={`_blank`}
                 >
                   <Card className="h-full overflow-hidden border-2 transition-all hover:border-primary">
                     <CardHeader className={`${project.color} flex h-32 items-center justify-center`}>
@@ -170,18 +175,11 @@ export default function PortfolioPage() {
               <Link
                 href="https://linkedin.com"
                 className="text-muted-foreground hover:text-primary"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn" target="_blank"
               >
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link
-                href="https://dribbble.com"
-                className="text-muted-foreground hover:text-primary"
-                aria-label="Dribbble"
-              >
-                <Dribbble className="h-5 w-5" />
-              </Link>
-              <Link href="https://github.com" className="text-muted-foreground hover:text-primary" aria-label="GitHub">
+              <Link href="https://github.com/yurdeth" className="text-muted-foreground hover:text-primary" aria-label="GitHub" target="_blank">
                 <Github className="h-5 w-5" />
               </Link>
             </div>
